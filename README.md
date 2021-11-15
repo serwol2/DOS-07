@@ -1,3 +1,3 @@
 # DOS-07
-пока здесь пусто
+HomeWork10 is here
 
