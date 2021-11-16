@@ -1,3 +1,2 @@
 # DOS-07
-пока здесь пусто
-
+Test Virtualisation 16.11.2021
