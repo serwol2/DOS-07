@@ -127,7 +127,7 @@ Task_12
 Закинуть на удаленный сервис директорию/файл архивом. Создание архива должно быть отражено в команде и архив не должен быть создан локально. 1 строка
 #######
 
-tar -cvz 
+tar -cvz  | ssh sergry@fdfksdlfk  "cat >dskffkl.t"
 
 #######
 
@@ -141,9 +141,6 @@ Task_13
 ######
 как-то так доделать разобраться
 find /home/ec2-user/dirsh -name "*.sh" -exec chmod +x {} \ 
-find /home/ec2-user/dirsh -name "*.sh" | xargs chmod +x
-
-
-
+find /home/ec2-user/dirsh -name "*.sh" | xargs chm
 
 #####
