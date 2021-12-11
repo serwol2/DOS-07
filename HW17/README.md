@@ -14,3 +14,5 @@ The input:
 Should print:
 sum 10  30  52
 ave   5    15  26  
+
+#awk
