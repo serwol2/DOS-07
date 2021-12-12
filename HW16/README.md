@@ -24,13 +24,14 @@ WantedBy=multi-user.target
 
 файл - /usr/local/bin/my_service :
 
-#!/bin/bash
-cp -R /test1/* /test2
+ #!/bin/bash
+ cp -R /test1/* /test2
 
 ##### 3) разрешить только созданной группе перезапускать этот сервис)
 
 Создаю файл: sudo visudo /etc/sudoers.d/usergroup
 Содержимое файла:
+
 %usergroup ALL=(root) NOPASSWD: /bin/systemctl restart my.service
 
 После этого sudo systemctl restart my.service от пользователя user1 работает. Другие команды (start, stop) не работают, нет прав.
