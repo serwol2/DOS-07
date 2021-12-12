@@ -1,8 +1,4 @@
 #!/bin/bash
-set -eo pipefail
-
-cat /proc/versio
-
 echo -n $(lsb_release -is)" "
 echo -n $(lsb_release -cs)" "
 echo $(uname -r)
