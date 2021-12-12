@@ -7,7 +7,6 @@
 
 
 dirname=/home/sergey/Desktop
-
 echo -n "Directory: "
 # read dirname
 echo

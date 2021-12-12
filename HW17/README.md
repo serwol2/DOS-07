@@ -1,11 +1,21 @@
+# HomeWork-17
 Срок 12.12.2021
 
-1) Pass the test: https://proghub.ru/t/bash-for-beginner
-2)  Создать скрипт, который проходит по всем аргументам которым мы передаем в скрипт 
-и выводит их ( каждый в новой строке).
-3) Develop a script which will recursively print all files in the directory provided 
-as a parameter provided via READ.
-If this path contains folders - script should recursively do the same in this folder.
+##### 1) Pass the test: https://proghub.ru/t/bash-for-beginner
+
+здесь скриншот
+
+##### 2)  Создать скрипт, который проходит по всем аргументам которым мы передаем в скрипт 
+##### и выводит их ( каждый в новой строке).
+
+hw17-2.sh 
+
+##### 3) Develop a script which will recursively print all files in the directory provided 
+##### as a parameter provided via READ.
+##### If this path contains folders - script should recursively do the same in this folder.
+
+скрипт - hw17-3.sh (допилить ввод данных)
+
 $) *Написать скрипт, который будет считать the sum and average чисел в 3 колонках
 The input:
 4  10  21
