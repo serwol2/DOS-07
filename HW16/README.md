@@ -48,15 +48,15 @@ sudo usermod -g usergroup user1
 
 Скрипт hw16.sh:
 
-> #!/bin/bash
-> echo -n $(lsb_release -is)" "
-> echo -n $(lsb_release -cs)" "
-> echo $(uname -r)
-> echo $(hostname -I)
-> echo 'Load Average (15 min):' $(uptime |awk '{print $10;}') $(uptime -p)
-> echo 'Used memory:' $(free -h| grep "Mem" | awk '{print $3;}')
-> echo 'Users:' $(who -q)
-> echo
+> #!/bin/bash	
+> echo -n $(lsb_release -is)" "	
+> echo -n $(lsb_release -cs)" "	
+> echo $(uname -r)	
+> echo $(hostname -I)	
+> echo 'Load Average (15 min):' $(uptime |awk '{print $10;}') $(uptime -p)	
+> echo 'Used memory:' $(free -h| grep "Mem" | awk '{print $3;}')	
+> echo 'Users:' $(who -q)	
+> echo	
 
 В файле ~/.bashrc
 добавил строку:  /home/sergey/HW/hw16.sh
@@ -67,7 +67,8 @@ sudo usermod -g usergroup user1
 
 Результат работы при подключении по ssh:
 
-> Ubuntu focal 5.11.0-40-generic
-> 192.168.31.9
-> Load Average (15 min): 0,13, up 4 days, 22 hours, 35 minutes
-> Used memory: 1,6Gi
+> Ubuntu focal 5.11.0-40-generic	
+> 192.168.31.9	
+> Load Average (15 min): 0,13, up 4 days, 22 hours, 35 minutes	
+> Used memory: 1,6Gi	
+	
