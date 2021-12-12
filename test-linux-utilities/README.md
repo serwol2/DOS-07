@@ -1,5 +1,9 @@
 - 1) Скачать git репу https://github.com/hashicorp/vagrant, используя curl
 > curl -LJO https://github.com/hashicorp/vagrant    ?????????
+вот так : curl -LJO https://github.com/hashicorp/vagrant/archive/main.tar.gz 
+
+
+
 
 - 2) Сгенерировать 4к ssh ключи и залить на удаленный сервер
 >  ssh-keygen -b 4096
@@ -27,10 +31,21 @@
 например grep bash < file /bin/*
 file /bin/* | grep bash
 
+##### придумать примеры
+
+
+
 
 - 8)Изменить цвет и размер шрифта по умолчанию в консоли вашего пользователя.
 
-> nano ~/.bashrc  ????
+> nano ~/.bashrc  ????  и перезапустить bashrc
+
+# PS1="\e[40;11;32m[\u@\h \W]$ "
+# PS1="\u@\w:" 
+#sudo nano ~/.bashrc 
+#PS1="\033[1;33;40mshalom, \033[3;31;40mwith underlined \033[5;34;41mand awful\!\033[0m"  
+
+
 
 
 - 9)Вывести информацию о созданном файле в отдельный файл txt.
