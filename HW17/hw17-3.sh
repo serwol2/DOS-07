@@ -4,11 +4,9 @@
 # as a parameter provided via READ.
 # If this path contains folders - script should recursively do the same in this folder.
 
-
-
-dirname=/home/sergey/Desktop
-echo -n "Directory: "
-# read dirname
+# dirname=/home/sergey/Desktop
+echo -n "Enter the full path to the directory: "
+read dirname
 echo
 echo
 

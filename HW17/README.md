@@ -14,15 +14,27 @@ hw17-2.sh
 ##### as a parameter provided via READ.
 ##### If this path contains folders - script should recursively do the same in this folder.
 
-скрипт - hw17-3.sh (допилить ввод данных)
+скрипт - hw17-3.sh
 
-$) *Написать скрипт, который будет считать the sum and average чисел в 3 колонках
-The input:
-4  10  21
-6  20  31
+результат работы:
 
-Should print:
-sum 10  30  52
-ave   5    15  26  
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW17/HW17/PrintScreen-HW17-3.png)]
 
-#awk
+
+
+##### $) *Написать скрипт, который будет считать the sum and average чисел в 3 колонках
+##### The input:
+##### 4  10  21
+##### 6  20  31
+
+##### Should print:
+##### sum 10  30  52
+##### ave   5    15  26
+
+скрипт - hw17-4.sh
+
+результат работы:
+
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW17/HW17/PrintScreen-HW17-4.png)]
+
+
