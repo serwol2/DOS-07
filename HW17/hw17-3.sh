@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Develop a script which will recursively print all files in the directory provided
 # as a parameter provided via READ.
 # If this path contains folders - script should recursively do the same in this folder.
