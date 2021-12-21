@@ -8,12 +8,16 @@
 
 Результат:
 
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW18/HW18/Printscreen-HW18-1.png)]
+
 ##### Develop a script with a function which will recursively print all files in the directory provided as a parameter provided via READ.
 ##### If this path contains folders - script should recursively do the same in this folder.
 
 Скрипт: hw18-2.sh
 
 Результат:
+
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW18/HW18/Printscreen-HW18-2.png)]
 
 
 ##### Develop a script with a function which will receive an array with some characters as parameters.
@@ -23,6 +27,7 @@
 
 Результат:
 
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW18/HW18/Printscreen-HW18-3.png)]
 
 ##### Написать скрипт для добавления нового пользователя в систему с указанием домашнего каталога, окружения и тд.
 #####   Все данные вводятся с клавиатуры при запуске скрипта. Если пользователь существует, выводить ошибку и сообщение об ошибке.
@@ -31,6 +36,7 @@
 
 Результат:
 
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW18/HW18/Printscreen-HW18-4.png)]
 
 
 
