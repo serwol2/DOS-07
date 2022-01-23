@@ -8,20 +8,19 @@
  - docker run -it -v /home/sergey/DOS-07/HW23/p1:/ansible -v/home/sergey/.ssh:/root/.ssh  ubuntu-ansible bash
  монтирую в контейнер директории с моим hosts и с ключами 
 
-[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW17/HW17/PrintScreen-HW17-2.png)]
-(положить сюда скриншот)
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW23/HW23/p1/screenshot-p1.png)
 
 ##### 2. Развернуть 4 виртуальные машины ubuntu и создать inventory file (db и app для дев и prod). 
 ##### Выполнить пинг через ansible для группы дев и прод.
  - Написал /p2/hosts (в качестве inventory)
  - ansible -i hosts dev,prod -m ping
 
-(положить сюда скриншот)
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW23/HW23/p2/screenshot-p2.png)
 то же самое через playbook 
  - написал /p2/playbook.yml
  - ansible-playbook -i hosts  playbook.yml
 
-(положить сюда скриншот)
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW23/HW23/p2/screenshot-p2-2.png)
 
 ##### 3. Повторить пункт 2 только в докере.
 
@@ -30,8 +29,8 @@
  - Написал /p3/hosts (в качестве inventory)
  - docker run -it -v /home/sergey/DOS-07/HW23/p3:/ansible -v/home/sergey/.ssh:/root/.ssh  ubuntu-ansible-3 bash
  монтирую в контейнер директории с моим hosts и с ключами
-
-(положить сюда скриншот)
+ 
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW23/HW23/p3/screenshot-p3.png)
 
 ##### 4. Создать docker-compose file без хранения секретов, а передавать через параметры или файл
  
@@ -46,8 +45,7 @@
  
 Через docker inspect никаких из данных (адресов и портов) не видно, значит "секреты" в образ и код не попали. 
 
-(положить сюда скриншот)
-
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW23/HW23/p4/screenshot-p4.png)
 
 ##### 5. Докеризировать bash сервис
  Решил докеризировать bash-скрипт из HW16 (вывод данных о системе при подключении через SSH). 
@@ -57,4 +55,4 @@
  - docker build -t myserv .
  - docker run -it -e ADDR=sergey@178.124.178.115 -e PORT=2222 -v /home/sergey/.ssh:/root/.ssh  myserv
  
-(положить сюда скриншот)
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW23/HW23/p5/screenshot-p5.png)
