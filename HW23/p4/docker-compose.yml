@@ -1,8 +1,10 @@
+version: "3.9"
 services:
-
- p4_my:
-        image: ubuntu
-        #env_file:
-        #- .env
-        
-      
+   p4:
+    image: myserv
+    env_file:
+    - sec.env
+    environment:
+    - ADDR
+    volumes:
+    - /home/sergey/.ssh:/root/.ssh
