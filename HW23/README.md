@@ -4,9 +4,10 @@
 ##### 1. Развернуть систему управления конфигруацией ansible в докере и управлять нашими хостами
  - Написал (/p1/Dockerfile)
  - docker build -t ubuntu-ansible .
- - Написал /p1/hosts (в качестве inventory) 
+ - Написал /p1/hosts (в качестве inventory)
+ - Написан /p1/playbook-p1.yml 
  - docker run -it -v /home/sergey/DOS-07/HW23/p1:/ansible -v/home/sergey/.ssh:/root/.ssh  ubuntu-ansible bash
- монтирую в контейнер директории с моим hosts и с ключами 
+ монтирую в контейнер директории с моим hosts,playbook и с ключами 
 
 ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW23/HW23/p1/screenshot-p1.png)
 
