@@ -4,7 +4,6 @@ Questions:
 - система для управления конфигурациями, работающая без агента на стороне управляемой машины.
  преимущества - не нужно забрасывать агенты, нужно только получить доступ
 
-
 2.Какие основные компоненты в ansible?
 - конфиг-файлы
 - inventory 
@@ -55,5 +54,7 @@ ansible-vault encrypt playbook.yml
 
 14.Создать ansible playbook для копирования нескольких файлов, имена файлов с путем указываем в командной строке как параметр.
 
-
-ansible-playbook -i hosts  playbook-test.yml --extra-vars "from_-extra-vars "version==
+- файл inventory: hosts
+- файл  Playbook-test.yml
+- ansible-playbook -i hosts  playbook-test.yml -e "file1=hosts" -e "file2=playbook-test.yml" -e "file3=/home/sergey/.ssh/id_rsa.pub"
+/home/sergey/DOS-07/Ansible-Test

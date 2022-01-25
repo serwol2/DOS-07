@@ -1,15 +1,20 @@
 ---
 - name: CopyFiles
   hosts: all
+  become: true 
 
   vars:
-      from1: "{{ from_ }}"
-      to1: "{{ to_ }}"
-
+      file1: ""
+      file2: ""
+      file3: ""
+      
   tasks:
-    - name copy-files-from-host
-      ansible.builtin.copy:
-        src: {{ from_ }}
-        # /home/sergey/DOS-07/Ansible-Test
-        dest: {{ to_ }}
-        # /home/sergey/1
+    - name: copy-file
+      copy:
+        src: "{{ item }}"
+        dest: /home/sergey/Desktop
+      with_items:
+         - "{{file1}}"
+         - "{{file2}}"
+         - "{{file3}}"
+      ignore_errors: yes 
