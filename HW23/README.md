@@ -28,8 +28,9 @@
 - Написал (/p3/Dockerfile)
  - docker build -t ubuntu-ansible-3 .
  - Написал /p3/hosts (в качестве inventory)
+ - Написал /p3/playbook-p3.yml
  - docker run -it -v /home/sergey/DOS-07/HW23/p3:/ansible -v/home/sergey/.ssh:/root/.ssh  ubuntu-ansible-3 bash
- монтирую в контейнер директории с моим hosts и с ключами
+ монтирую в контейнер директории с моим hosts,playbook  и с ключами.
  
 ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW23/HW23/p3/screenshot-p3.png)
 
