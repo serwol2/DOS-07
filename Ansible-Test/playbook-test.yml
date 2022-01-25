@@ -1,0 +1,15 @@
+---
+- name: CopyFiles
+  hosts: all
+
+  vars:
+      from1: "{{ from_ }}"
+      to1: "{{ to_ }}"
+
+  tasks:
+    - name copy-files-from-host
+      ansible.builtin.copy:
+        src: {{ from_ }}
+        # /home/sergey/DOS-07/Ansible-Test
+        dest: {{ to_ }}
+        # /home/sergey/1
