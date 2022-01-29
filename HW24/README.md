@@ -15,4 +15,22 @@ ansible-playbook -i my_inventory playbook-1.yml
 
 
 ##### 2. Установить докер и docker-compose на машины с убунту и на centos
-3. Развернуть приложение voting-app, используя docker-compose через ansible
+
+- Написал /p2/ansible.cfg , /p2/my_inventory , /p2/playbook-2.yml
+- ansible-playbook -i my_inventory playbook-2.yml
+
+(сюда скриншот)
+
+
+
+##### 3. Развернуть приложение voting-app, используя docker-compose через ansible
+
+с учетом того, что в предыдущем пункте уже установлен docker и docker-compose:
+
+- написаны /p3/ansible.cfg , /p3/my_inventory , /p3/playbook-3-1.yml
+- ansible-playbook -i my_inventory playbook-3-1.yml
+долго ждём
+
+
+
+
