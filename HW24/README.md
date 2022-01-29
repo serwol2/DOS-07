@@ -31,6 +31,8 @@ ansible-playbook -i my_inventory playbook-1.yml
 - ansible-playbook -i my_inventory playbook-3-1.yml
 долго ждём
 
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW24/HW24/p3/screenshot-HW24-3-1.png)
+
 
 ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW24/HW24/p3/screenshot-HW24-3-2.png)
 
