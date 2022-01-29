@@ -11,7 +11,7 @@ c содержимым: sergey ALL=(ALL:ALL) NOPASSWD:ALL
 
 ansible-playbook -i my_inventory playbook-1.yml
 
-(сюда скриншот)
+https://github.com/serwol2/DOS-07/blob/HW24/HW24/p1/screenshot-HW24p1.png
 
 
 ##### 2. Установить докер и docker-compose на машины с убунту и на centos
