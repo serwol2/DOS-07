@@ -10,25 +10,19 @@
 ##### 3. Развернуть nginx c lua модулем через ansible, либо установить nginx из source
 #####    Проверить работоспособность
 
-здесь про установку с нуля и развёртывание модулей 
-https://www.alibabacloud.com/blog/how-to-build-nginx-from-source-on-ubuntu-20-04-lts_597793
-ngx_http_lua_module.so 
-nginx-1.21.6.tar.gz 
-openresty - Будет nginx+lua
+Устанавливаю Nginx-1.21.6 из исходников через Ansible (роль) на CentOS Stream release 8 и Ubuntu 20.04/21.04,
+запускаю как сервис. Установка на машины без Nginx (не контролируется, не удаляется если есть).
 
-sudo /etc/tempnginx/nginx-1.21.6/configure.sh --prefix=/var/www/html --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --with-pcre  --lock-path=/var/lock/nginx.lock --pid-path=/var/run/nginx.pid --with-http_ssl_module --with-http_image_filter_module=dynamic --modules-path=/etc/nginx/modules --with-http_v2_module --with-stream=dynamic --with-http_addition_module --with-http_mp4_module
+Инструкции по установке из исходников (в "ручном режиме" без Ansible):
+Ubuntu: https://www.alibabacloud.com/blog/how-to-build-nginx-from-source-on-ubuntu-20-04-lts_597793
+Centos: https://tylersguides.com/guides/installing-nginx-from-source-on-centos-7/ (там есть про службу)
 
+- сделал роль /p3/nginx-src-inst
+- файлы для сервиса лежат в /nginx-src-inst/ (оттуда копируются на управляемую машину)
+- запуск: ansible-playbook -i myhosts playbookHW28-3.yml
+- nginx работает на всех машинах, отвечает в браузере
 
-- инсталлируем NGINX
-  (роль nginx-install)
-- инсталлируем NGINX Developer Kit - NDK  (https://docs.nginx.com/nginx/admin-guide/dynamic-modules/ndk/)
-- инсталлируем Lua module
-
-
-
-
-
-
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p3/Screenshot-HW28-p3-1.png)
 
 
 ##### 4. Установить  apache jmetr для тестирования нагрузки вебсерверов (лучше сделать через ansible и установить сервер, и воркеры на других машинах)
