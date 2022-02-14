@@ -1,10 +1,8 @@
 ---
-- name: Install apache jmeter
+- name: Install nginx from source
   hosts: all
   become: yes
-  #become_user: sergey
+  
   
   roles:
-   # - nginx-install
-   # - ndk-install
      - nginx-src-inst
