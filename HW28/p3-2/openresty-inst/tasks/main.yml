@@ -1,0 +1,74 @@
+---
+# tasks file for openresty-inst
+
+  # Block for ubuntu  
+#   - block: 
+#      - name: Update Repository cache ubuntu
+#        apt:
+#           update_cache: true
+#           cache_valid_time: 3600
+#           force_apt_get: true
+
+#      - name: install development libraries #Nginx Web Server for Ubuntu
+#        apt: 
+#          pkg:
+#           - build-essential
+#           - libpcre3
+#           - libpcre3-dev  
+#           - zlib1g 
+#           - zlib1g-dev 
+#           - libssl-dev 
+#           - libgd-dev 
+#           - libxml2 
+#           - libxml2-dev 
+#           - uuid-dev
+#          state: latest
+#     when: ansible_os_family == "Debian"
+
+ # Block for centos
+  - block:
+     - name: add openresty repo
+       get_url:
+        url: https://openresty.org/package/centos/openresty.repo
+        dest: /etc/yum.repos.d/
+
+     - name: Upgrade all packages
+       yum:
+          name: '*'
+          state: latest
+
+     - name: Install Openresty
+       yum:
+         name: openresty
+
+  
+     - name: edit-firewall
+       firewalld:
+        service: http
+        permanent: true
+        state: enabled
+    
+     - name: reload service firewalld
+       systemd:
+        name: firewalld
+        state: reloaded
+
+    when: ansible_os_family == "RedHat"           
+
+
+#   - name: copy unit file
+#     copy: 
+#       src: ./nginx-src-inst/files/nginx-1.21.6.service
+#       dest: /etc/systemd/system/
+
+#   - name: copy environment file 
+#     copy: 
+#       src: ./nginx-src-inst/files/nginx-1.21.6
+#       dest: /etc/sysconfig/   
+
+
+  - name: Start Openresty
+    systemd: 
+           name: openresty 
+           state: started
+           enabled: yes 
