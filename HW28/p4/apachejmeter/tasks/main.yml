@@ -4,7 +4,7 @@
   apt:
     update_cache: true
     cache_valid_time: 3600
-    # force_apt_get: true
+    
 
 - name:  install java
   apt:
@@ -26,4 +26,4 @@
   unarchive:
     src: https://downloads.apache.org/jmeter/binaries/apache-jmeter-5.4.zip
     dest: /etc/jmeter 
-    remote_src: yes # why??
+    remote_src: yes 

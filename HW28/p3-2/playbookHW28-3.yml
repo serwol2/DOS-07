@@ -1,8 +1,0 @@
----
-- name: Install nginx from source
-  hosts: all
-  become: yes
-  
-  
-  roles:
-     - nginx-src-inst
