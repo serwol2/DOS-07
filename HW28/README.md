@@ -39,8 +39,8 @@ Centos: https://tylersguides.com/guides/installing-nginx-from-source-on-centos-7
 
 - перезагружаю сервис: sudo systemctl reload openresty
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p3-2/Screenshot-HW28-p3-2-1.png)
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p3-2/Screenshot-HW28-p3-2-2.png)
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p3-2/screenshot-HW28-p3-2-1.png)
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p3-2/screenshot-HW28-p3-2-2.png)
 
 
 ##### 4. Установить  apache jmetr для тестирования нагрузки вебсерверов (лучше сделать через ansible и установить сервер, и воркеры на других машинах)
