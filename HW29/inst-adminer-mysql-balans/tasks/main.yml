@@ -1,0 +1,57 @@
+---
+# tasks file for inst-adminer-mysql-balans
+
+# - name: start adminer-docker No1
+#   docker_container:
+#     name: myadmier1
+#     image: adminer
+#     state: started
+#     restart: yes
+#     ports:
+#     - "88:8080"
+#     env: 
+#       ADMINER_DESIGN: "nette"
+   
+# - name: start adminer-docker No2
+#   docker_container:
+#     name: myadmier2
+#     image: adminer
+#     state: started
+#     restart: yes
+#     ports:
+#     - "89:8080"
+#     env: 
+#       ADMINER_DESIGN: "dracula"
+
+# - name: start adminer-docker No3
+#   docker_container:
+#     name: myadmier3
+#     image: adminer
+#     state: started
+#     restart: yes
+#     ports:
+#     - "90:8080"    
+#     env: 
+#       ADMINER_DESIGN: "lucas-sandery"
+
+- name: mkdir etc/fornginx
+  file:
+     path: /etc/fornginx
+     state: directory
+     mode: '0775'
+
+- name: copy configuration file for nginx
+  copy:
+     src: ./inst-adminer-mysql-balans/files/default.conf
+     dest: /etc/fornginx/default.conf
+
+- name: start nginx-docker + mount dir with my config
+  docker_container:
+    name: mynginx
+    image: nginx
+    state: started
+    restart: yes
+    ports:
+    - "80:80"   
+    volumes:
+       - /etc/fornginx:/etc/nginx/conf.d
