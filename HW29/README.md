@@ -7,8 +7,10 @@
   
   - Получаю сертификат используя let's encript (основная инструкция здесь: https://www.8host.com/blog/sozdanie-sertifikata-lets-encrypt-dlya-nginx-v-ubuntu-20-04/) :
      у меня есть домен tutoronline.by, на него и получаю сертификат
-     - прописал DNS на мой адрес 
-       (скриншот 1)
+     - прописал DNS на мой адрес
+    
+      ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW29/HW29/screenshot-1.png)
+    
      - sudo apt install certbot python3-certbot-nginx
      - настроил на машине (доступной по зарегистрированному адресу) nginx 
      - создал 2 конфиг файла
@@ -26,8 +28,9 @@
   - в директорий inst-adminer-mysql-balans/files скопировал полученные ранее сертификаты и файл с конфигурацией для балансировщика (defaults.conf)
   - запуск - playbookHW29-1
   - на скриншоте - 3 экземпляра tutoronline.by - защищенное сертификатом соединение и 3 разных дизайна (балансировщик работает)
-   (скриншот)
    
+   ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW29/HW29/screenshot-2.png)
+
 ##### 4) Посмотре	else(есть?)
 
 нет
@@ -38,7 +41,9 @@
 - создал файл /p5/index.html
 - разместил его и изоражение (ulitka.png) в /var/www/tutoronline.by/public_html/ (на машине с nginx)
 - картинка на страничке:
-  (скриншот1)
+ 
+  ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW29/HW29/p5/screenshot-hw29-p5-1.png)
+
 - добавил в config nginx (/etc/nginx/conf.d/tutoronline_by_ssl.conf):
      location /ulitka.png {
          image_filter rotate 180;
@@ -46,7 +51,9 @@
 
 - sudo systemctl restart nginx
 - изображение перевернулось:
-- (скриншот 2)
+
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW29/HW29/p5/screenshot-hw29-p5-2.png)
+
 
 
 
