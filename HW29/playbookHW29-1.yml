@@ -5,5 +5,5 @@
   
   
   roles:
-     #- docker-inst
+     - docker-inst
      - inst-adminer-mysql-balans
