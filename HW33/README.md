@@ -38,10 +38,40 @@
 
 ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW33/HW33/screenshot-p7-2.png)
 
-8. Поднять RDS с сервер с базой данных, настроить репликацию и бэкапы
-9. Написать скрипт, который будет делать бэкап базы по расписанию и хранить на s3
+##### 8. Поднять RDS с сервер с базой данных, настроить репликацию и бэкапы
 
-10. Посмотреть, как асьюмить роли. Создать роль и заасьюмить ее пользователем
-11. Настроить отображение вебконтента (Index.html) через cloudfront + s3
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW33/HW33/screenshot-p8-1.png)
+
+##### 9. Написать скрипт, который будет делать бэкап базы по расписанию и хранить на s3
+
+
+информация здесь: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ExportSnapshot.html
+
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW33/HW33/screenshot-p9-1.png)
+
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW33/HW33/screenshot-p9-2.png)
+
+недоделано base-backup-s3.sh вылетает с ошибкой ругается на не совпадение региона
+
+
+cd ------- 10. Посмотреть, как асьюмить роли. Создать роль и заасьюмить ее пользователем
+
+
+
+##### 11. Настроить отображение вебконтента (Index.html) через cloudfront + s3
 (путь /dos-07 в cloudfront, index.html не доступен из вне)
-12. Настроить отображение вебконтента (Index.html) через cloudfront + ALB + EC2
+
+информация здесь: 
+https://aws.amazon.com/ru/premiumsupport/knowledge-center/cloudfront-serve-static-website/
+
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW33/HW33/screenshot-p11.png)
+
+
+##### 12. Настроить отображение вебконтента (Index.html) через cloudfront + ALB + EC2
+
+https://aws.amazon.com/ru/cloudfront/getting-started/EC2/
+
+Результат работы (nginx на разных инстансах через балансировщик и cloudfront):
+
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW33/HW33/screenshot-p12.png)
+
