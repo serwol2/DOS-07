@@ -38,13 +38,13 @@ resource "aws_launch_template" "hw36-launch-template" {
    }
 
    network_interfaces {
-    associate_public_ip_address = true
+    associate_public_ip_address = false
     #subnet_id = [aws_security_group.sg_hw36.vpc_id]
     security_groups = [aws_security_group.sg_hw36_alb.id]
   }
   key_name = "mykeypairsergey"  
   user_data = filebase64("nginx_and_page.sh") 
-
+    
 }
 
 #launch template is OK 
@@ -138,12 +138,20 @@ resource "aws_alb" "alb-hw36" {
   }
 }
 
-resource "aws_lb_target_group" "target-group-hw36" {
+resource "aws_lb_target_group" "traget-group-hw36" {
   name     = "target-group-hw36"
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc-for-hw36.id
 }
+
+# resource "aws_lb_target_group_attachment" "add-targets-to-tg-hw36" {
+#   target_group_arn = aws_lb_target_group.traget-group-hw36.arn
+#   target_id        = aws_alb.alb-hw36.arn
+#   port             = 80
+# }
+
+
 
 resource "aws_lb_listener" "listener-hw36-port80" {
   load_balancer_arn = aws_alb.alb-hw36.arn 
@@ -151,12 +159,35 @@ resource "aws_lb_listener" "listener-hw36-port80" {
   protocol          = "HTTP"
   default_action {
     type             = "forward"
-    target_group_arn = aws_lb_target_group.target-group-hw36.arn
+    target_group_arn = aws_lb_target_group.traget-group-hw36.arn
   }
 }
 
 
+resource "aws_autoscaling_group" "autoscaling-group-hw36" {
+  #vpc_id   = aws_vpc.vpc-for-hw36.id
+  #availability_zones = ["us-east-1a"]
+  vpc_zone_identifier  = aws_subnet.subnet-hw36.*.id
 
+  desired_capacity   = 2
+  max_size           = 2
+  min_size           = 2
+
+  launch_template {
+    id      = aws_launch_template.hw36-launch-template.id
+    version = "$Latest"
+  }
+  tag {
+    key   = "Name"
+    value = "autoscaling-group-hw36"
+    propagate_at_launch = true
+  }
+}
+
+resource "aws_autoscaling_attachment" "asg_attachment_hw36" {
+  autoscaling_group_name = "${aws_autoscaling_group.autoscaling-group-hw36.id}"
+  alb_target_group_arn   = aws_lb_target_group.traget-group-hw36.arn  #aws_lb_target_group" "traget-group-hw36"
+}
 
 
 
@@ -177,6 +208,9 @@ resource "aws_lb_listener" "listener-hw36-port80" {
 
 # }
 
-# output "ec2instance" {
-#   value = aws_instance.nginx-hw35.public_ip
+output "Load-balancer-DNS-name" {
+   value = aws_alb.alb-hw36.dns_name
+}
+# output "Load balancer DNS name" {
+#    value = aws_alb.alb-hw36.dns.name
 # }
