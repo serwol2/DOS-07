@@ -19,9 +19,6 @@ resource "aws_launch_template" "hw36-launch-template" {
   name = "hw36-lt"
   instance_type = "t2.micro"
   image_id = "ami-0e472ba40eb589f49"
- # security_group_names = [aws_security_group.sg_hw36.name]
- 
-
   block_device_mappings {
     device_name = "/dev/sda1"
     ebs {
@@ -39,22 +36,18 @@ resource "aws_launch_template" "hw36-launch-template" {
 
    network_interfaces {
     associate_public_ip_address = false
-    #subnet_id = [aws_security_group.sg_hw36.vpc_id]
     security_groups = [aws_security_group.sg_hw36_alb.id]
   }
   key_name = "mykeypairsergey"  
   user_data = filebase64("nginx_and_page.sh") 
     
 }
-
 #launch template is OK 
 
 resource "aws_vpc" "vpc-for-hw36" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
-  enable_dns_hostnames = true
-
-
+  #enable_dns_hostnames = true
   tags = {
     Name = "vpc-for-hw36"
   }
@@ -131,28 +124,17 @@ resource "aws_alb" "alb-hw36" {
   name            = "terraform-alb-hw36"
   security_groups = ["${aws_security_group.sg_hw36_alb.id}"]
   subnets         = aws_subnet.subnet-hw36.*.id
-  
- # ["${aws_subnet.main.*.id}"]
   tags = {
     Name = "terraform-alb-hw36"
   }
 }
-
 resource "aws_lb_target_group" "traget-group-hw36" {
   name     = "target-group-hw36"
   port     = 80
   protocol = "HTTP"
+  #target_type = "ip"
   vpc_id   = aws_vpc.vpc-for-hw36.id
 }
-
-# resource "aws_lb_target_group_attachment" "add-targets-to-tg-hw36" {
-#   target_group_arn = aws_lb_target_group.traget-group-hw36.arn
-#   target_id        = aws_alb.alb-hw36.arn
-#   port             = 80
-# }
-
-
-
 resource "aws_lb_listener" "listener-hw36-port80" {
   load_balancer_arn = aws_alb.alb-hw36.arn 
   port              = "80"
@@ -163,16 +145,11 @@ resource "aws_lb_listener" "listener-hw36-port80" {
   }
 }
 
-
 resource "aws_autoscaling_group" "autoscaling-group-hw36" {
-  #vpc_id   = aws_vpc.vpc-for-hw36.id
-  #availability_zones = ["us-east-1a"]
   vpc_zone_identifier  = aws_subnet.subnet-hw36.*.id
-
   desired_capacity   = 2
   max_size           = 2
   min_size           = 2
-
   launch_template {
     id      = aws_launch_template.hw36-launch-template.id
     version = "$Latest"
@@ -183,34 +160,13 @@ resource "aws_autoscaling_group" "autoscaling-group-hw36" {
     propagate_at_launch = true
   }
 }
-
 resource "aws_autoscaling_attachment" "asg_attachment_hw36" {
   autoscaling_group_name = "${aws_autoscaling_group.autoscaling-group-hw36.id}"
-  alb_target_group_arn   = aws_lb_target_group.traget-group-hw36.arn  #aws_lb_target_group" "traget-group-hw36"
+  alb_target_group_arn   = aws_lb_target_group.traget-group-hw36.arn  
 }
-
-
-
-# resource "aws_key_pair" "key" {
-#   key_name   = "mykey"
-#   public_key = file("~/.ssh/mykey.pub")
-# }
-
-# resource "aws_instance" "nginx-hw35" {
-#   ami           = "ami-04505e74c0741db8d"
-#   instance_type = "t2.micro"
-#   key_name = aws_key_pair.key.key_name
-#   security_groups = [aws_security_group.my-sg-hw35-p1.name]
-#   user_data = "${file("inst-nginx.sh")}" 
-#   tags = {
-#     Name = "nginx-hw35"
-#   }
-
-# }
-
 output "Load-balancer-DNS-name" {
    value = aws_alb.alb-hw36.dns_name
 }
-# output "Load balancer DNS name" {
-#    value = aws_alb.alb-hw36.dns.name
-# }
+output "vpc-id" {
+   value = aws_vpc.vpc-for-hw36.id
+}
