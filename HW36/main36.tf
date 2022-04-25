@@ -35,9 +35,9 @@ resource "aws_launch_template" "hw36-launch-template" {
    }
 
    network_interfaces {
-    associate_public_ip_address = false
+    associate_public_ip_address = true
     security_groups = [aws_security_group.sg_hw36_alb.id]
-  }
+   }
   key_name = "mykeypairsergey"  
   user_data = filebase64("nginx_and_page.sh") 
     
@@ -92,21 +92,30 @@ resource "aws_subnet" "subnet-hw36" {
 
 resource "aws_security_group" "sg_hw36_alb" {
   name        = "sg_hw36"
-  description = "Traffic 80 and 22"
+  description = "Traffic 80,22 and icmp only internal network"
   vpc_id = aws_vpc.vpc-for-hw36.id
   ingress {
     description      = "22"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    cidr_blocks      = [aws_vpc.vpc-for-hw36.cidr_block]
+
   }
   ingress {
     description      = "80"
     from_port        = 80
     to_port          = 80
     protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    cidr_blocks      = [aws_vpc.vpc-for-hw36.cidr_block]
+  }
+
+  ingress {
+    description      = "ICMP"
+    from_port        = 0
+    to_port          = 0
+    protocol         = "icmp"
+    cidr_blocks      = [aws_vpc.vpc-for-hw36.cidr_block]
   }
   egress {
     from_port        = 0
@@ -120,9 +129,35 @@ resource "aws_security_group" "sg_hw36_alb" {
   }
 
 }
+
+resource "aws_security_group" "sg_hw36_for_alb_only" {
+  name        = "sg_hw36_alb_only"
+  description = "Traffic 80 only"
+  vpc_id = aws_vpc.vpc-for-hw36.id
+  ingress {
+    description      = "80"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+  }
+  tags = {
+    Name = "sg_hw36_for_alb_only"
+  }
+
+}
+
 resource "aws_alb" "alb-hw36" {
   name            = "terraform-alb-hw36"
-  security_groups = ["${aws_security_group.sg_hw36_alb.id}"]
+  security_groups = ["${aws_security_group.sg_hw36_for_alb_only.id}"]
   subnets         = aws_subnet.subnet-hw36.*.id
   tags = {
     Name = "terraform-alb-hw36"
