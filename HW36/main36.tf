@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.availability_zone_name    # "us-east-1"
   #access_key = "AKIAT7EVD2KBERXXXXX"
   #secret_key = "rnucH1/Th8CHKIgPa4W+PCYEEZXXXXXXXXXX"
 }
@@ -17,9 +17,9 @@ provider "aws" {
 
 resource "aws_launch_template" "hw36-launch-template" {
   name = "hw36-lt"
-  instance_type = "t2.micro"
-  image_id = "ami-0e472ba40eb589f49"
-  block_device_mappings {
+  instance_type = var.istance_type_name   #"t2.micro"
+  image_id = var.image_id_n               #"ami-0e472ba40eb589f49"
+    block_device_mappings {
     device_name = "/dev/sda1"
     ebs {
       volume_size = 8
