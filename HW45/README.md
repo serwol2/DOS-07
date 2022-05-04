@@ -6,6 +6,8 @@ https://alextoolsblog.blogspot.com/2020/04/build-and-run-app-in-container.html
 
 https://cloud.croc.ru/blog/about-technologies/flask-prilozheniya-v-docker/
 
+https://github.com/marketplace/actions/send-email
+
 
 2. Реализовать CI/CD на github actions следуя воркфлоу диаграммы, как обсуждали на уроке
 3. Написать джобу, которая вызывается при коммите в репу и забирает оттуда файлы и закидывает их на S3 бакет(должно быть поле Exclude)
