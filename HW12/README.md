@@ -4,7 +4,7 @@
 ####################
 ok, отвечают через браузер
 
-![screenshot1](https://github.com/serwol2/DOS-07/blob/HW12/Scrsht-jenkins.png)
+![screenshot1](https://github.com/serwol2/DOS-07/blob/main/HW12/Scrsht-jenkins.png}
 ![screenshot2](https://github.com/serwol2/DOS-07/blob/HW12/Scrsht-nginx.png)
 ####################
 
