@@ -4,8 +4,8 @@
 ####################
 ok, отвечают через браузер
 
-![screenshot1](https://github.com/serwol2/DOS-07/blob/HW12/Scrsht-jenkins.png)
-![screenshot2](https://github.com/serwol2/DOS-07/blob/HW12/Scrsht-nginx.png)
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW12/Scrsht-jenkins.png)
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW12/Scrsht-nginx.png)
 ####################
 
 3) Просканить все порты и машины в сети одной командой.
