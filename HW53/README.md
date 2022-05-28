@@ -71,7 +71,8 @@
   (эта строка из вывода прошлой команды на мастер-ноде)
   - на мастер ноде:
   
-   ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p3-1-.png)
+ ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p3-1-.png)
+
 
   https://projectcalico.docs.tigera.io/getting-started/kubernetes/quickstart
 
