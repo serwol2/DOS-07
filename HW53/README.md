@@ -1,5 +1,5 @@
-##### 1. Создать namespace и развернуть в нем поду с nginx, настроить ограничения по 
-cpu: 500m и memory 256. Реализовать с помощью yml файла
+##### 1. Создать namespace и развернуть в нем поду с nginx, настроить ограничения по cpu: 500m и memory 256. 
+Реализовать с помощью yml файла
 
 - minikube start
 - minikube addons enable metrics-server
@@ -9,25 +9,22 @@ cpu: 500m и memory 256. Реализовать с помощью yml файла
 - kubectl get pod hw53p1memcpu  --output=yaml --namespace=hw53p1
   или kubectl describe pod hw53p1memcpu  --namespace=hw53p1
 
-screenshot-hw53-p1-1.png
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p1-1.png)
 
 - kubectl exec -it hw53p1memcpu --namespace=hw53p1 sh (зашел внутрь, посмотрел)
 - kubectl port-forward hw53p1memcpu 8080:80 --namespace=hw53p1
 
-screenshot-hw53-p1-2.png
-
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p1-2.png)
 
 - kubectl delete -f p1.yaml
 
-
 - kubectl create deployment web --image=nginx -o yaml --dry-run=client > p1.yaml
-
 
 ##### 2. Развернуть поду с nginx, выгрузить конфигурацию поду в yml
 
 - ubectl get pod hw53p1memcpu  --output=yaml --namespace=hw53p1 >p2-pod-config.yml
 
-3. Развернуть кубернетес с помощью kubeadmin
+##### 3. Развернуть кубернетес с помощью kubeadmin
 
 - есть 2 машины с ubuntu
 - на обоих машинках 
@@ -70,10 +67,11 @@ screenshot-hw53-p1-2.png
           mkdir -p $HOME/.kube
           sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
           sudo chown $(id -u):$(id -g) $HOME/.kube/config
-  - на воркер-ноде: sudo kubeadm join 192.168.31.5:6443 --token 0p42q9.gogjgpkuen8suukc --discovery-token-ca-cert-hash sha256:60d43f5aa3ecce638b3a4d6261d98841ccdd1371e1d370130ca4c1d56c823632   (эта строка из вывода прошлой команды на мастер-ноде)
+  - на воркер-ноде: sudo kubeadm join 192.168.31.5:6443 --token 0p42q9.gogjgpkuen8suukc --discovery-token-ca-cert-hash sha256:60d43f5aa3ecce638b3a4d6261d98841ccdd1371e1d370130ca4c1d56c823632   
+  (эта строка из вывода прошлой команды на мастер-ноде)
   - на мастер ноде:
   
-  screenshot-hw53-p3-1-.png
+   ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p3-1-.png)
 
   https://projectcalico.docs.tigera.io/getting-started/kubernetes/quickstart
 
@@ -81,16 +79,9 @@ screenshot-hw53-p1-2.png
 - на мастере kubectl apply -f calico.yaml  (в этом файле изменен адрес на 172.16.0.0/16)
 - на мастере watch kubectl get pods -n calico-system
 
- screenshot-hw53-p3-2-.png
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p3-2-.png)
 
-screenshot-hw53-p3-3-.png
-
-
-
-
-
-
-
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p3-3-.png)
 
 ##### 4. Create deployment.yaml file and deploy any application (adminer, for example)
 Deploy your own application from Docker HUB (private repo)
@@ -100,18 +91,7 @@ Deploy your own application from Docker HUB (private repo)
 - kubectl  apply -f p4.yaml
 - kubectl port-forward myapp 8888:80 -n hw53p4
 
-screenshot-hw53-p1-4.png
-
-
-
-
-
-
-
-
-
+![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p1-4.png)
 
 
 https://dev.to/asizikov/using-github-container-registry-with-kubernetes-38fb
-
-
