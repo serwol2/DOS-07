@@ -1,0 +1,2 @@
+[my_servers]
+ ubuntu2004-on-aws ansible_host=3.91.176.193 ansible_ssh_port=22 ansible_user=ubuntu ansible_ssh_private_key_file=/home/sergey/.ssh/mykeypairsergey.pem
