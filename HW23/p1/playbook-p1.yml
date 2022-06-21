@@ -1,0 +1,10 @@
+---
+  - name: MyPlaybook
+    hosts: all
+
+    tasks:
+      - name: Ping
+        ping:
+      - name: Debug  
+        debug: 
+          msg: "Tra-ta-ta"

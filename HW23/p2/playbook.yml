@@ -1,0 +1,8 @@
+---
+- name: hw23p2
+  hosts: devprod
+
+  tasks:
+
+  - name: ping servers dev and prod
+    ping:
