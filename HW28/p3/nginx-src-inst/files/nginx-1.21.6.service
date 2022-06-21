@@ -1,0 +1,13 @@
+[Unit]
+Description=nginx 1.21.6
+After=syslog.target network.target
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/sysconfig/nginx-1.21.6
+ExecStart=/usr/sbin/nginx $CLI_OPTIONS
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/usr/sbin/nginx -s quit
+
+[Install]
+WantedBy=multi-user.target

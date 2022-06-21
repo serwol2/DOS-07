@@ -1,0 +1,36 @@
+---
+
+- name: voting up in ubuntu 
+  hosts: all
+  become: yes
+
+  tasks:
+ 
+  - name: install git 
+    apt:
+     name: git
+     state: latest
+
+  - name: create folder /voting-app
+    file: 
+     path: /voting-app 
+     state: directory 
+     mode: 0755
+
+  - name: Git clone voting-app
+    git: 
+     clone: yes 
+     dest: /voting-app 
+     repo: https://github.com/dockersamples/example-voting-app.git  
+
+  #- name: docker compose up
+  #  docker_compose: 
+  #   project_src: /voting-app 
+  #   files:
+  #   - docker-compose.yml
+     #state: present    
+    
+  - name: docker compose up
+    shell:
+       cmd: "docker-compose -f docker-compose.yml up"
+       chdir: /voting-app/

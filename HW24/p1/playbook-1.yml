@@ -1,0 +1,39 @@
+---
+- name: install ngunx on ubuntu and centos
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: install nginx on centos
+      yum: 
+          name=nginx 
+          state=latest
+      notify:
+        - edit-firewall
+        - reload service firewalld   
+      when: ansible_os_family == "RedHat"
+
+    - name: install nginx on ubuntu
+      apt: 
+          name=nginx 
+          state=latest
+      when: ansible_os_family == "Debian"
+
+    - name: Start nginx
+      systemd: 
+        name: nginx 
+        state: started 
+        enabled: yes
+    
+  handlers:
+    
+    - name: edit-firewall
+      firewalld:
+        service: http
+        permanent: true
+        state: enabled
+    
+    - name: reload service firewalld
+      systemd:
+        name: firewalld
+        state: reloaded

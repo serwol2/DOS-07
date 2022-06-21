@@ -1,0 +1,29 @@
+---
+# tasks file for apachejmeter
+- name: Update Repository cache ubuntu
+  apt:
+    update_cache: true
+    cache_valid_time: 3600
+    
+
+- name:  install java
+  apt:
+    name: openjdk-8-jdk
+    state: latest   
+
+- name: install apache
+  apt: 
+    name: apache2
+    state: latest
+
+- name: create dir Jmeter
+  file:
+    path: /etc/jmeter
+    state: directory
+    mode: '0775' 
+
+- name: Jmeter unzip
+  unarchive:
+    src: https://downloads.apache.org/jmeter/binaries/apache-jmeter-5.4.zip
+    dest: /etc/jmeter 
+    remote_src: yes 

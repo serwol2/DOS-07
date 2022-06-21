@@ -1,0 +1,55 @@
+---
+# tasks file for docker-inst
+
+- name: Update Repository cache ubuntu
+  apt:
+    update_cache: true
+    cache_valid_time: 3600
+    force_apt_get: true
+
+- name: "install some packs"
+  apt: 
+    pkg:
+       - apt-transport-https
+       - ca-certificates
+       - curl 
+       - software-properties-common
+       - gnupg
+       - lsb-release
+       - python3-pip
+       - virtualenv
+       - python3-setuptools
+       # - python-pip
+    state: latest
+
+
+- name: Import a GPG-key from a url
+  apt_key:
+       url: https://download.docker.com/linux/ubuntu/gpg
+       state: present  
+
+- name: add docker repo ubuntu
+  lineinfile:
+        path: /etc/apt/sources.list.d/docker.list
+        line: deb https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable
+        state: present
+        create: yes
+
+- name: instal docker ubuntu
+  apt:
+      pkg:
+        - docker-ce
+        - docker-ce-cli 
+        - containerd.io
+      state: latest   
+      update_cache: yes  
+
+- name: Install Docker Module for Python
+  pip:
+    name: docker
+
+- name: download the current (1.29.2) stable release of Docker Compose
+  get_url:
+    url: https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: '0777'     

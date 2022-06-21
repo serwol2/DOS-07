@@ -1,0 +1,39 @@
+---
+# tasks file for inst-mysql
+
+- name: Install mysql
+  apt:
+    state: latest
+    update_cache: yes
+    pkg:
+    - mysql-server
+    - mysql-client-core-8.0
+    - python3-mysqldb
+
+- name: start and enable mysql service
+  service:
+    name: mysql
+    state: started
+    enabled: yes    
+
+- name: copy configuration file my.cnf for mysql
+  copy:
+     src: ./inst-mysql/files/my.cnf
+     dest: /etc/mysql/conf.d/my.cnf
+     force: yes
+
+- name: Create a new database
+  community.mysql.mysql_db:
+    name: my-shop
+    state: present 
+
+- name: Add tables to database my-shop
+  community.mysql.mysql_query:
+    login_db: my-shop
+    query:
+    - create table customer (id int (10) AUTO_INCREMENT, name varchar(20) NOT NULL, phone varchar(13) NOT NULL, email varchar(50), PRIMARY KEY (id) )
+    - create table product (id int (10) AUTO_INCREMENT, name varchar(50) NOT NULL, price decimal(7,2), amount decimal(7,2), description varchar(100), PRIMARY KEY (id) )
+    - create table cart (id int (10) AUTO_INCREMENT, customer_id int(10) not null, product_id int(10), PRIMARY KEY (id) )
+    - create table cart_product (id int (10) AUTO_INCREMENT, cart_id int(10) not null, product_id int(10), PRIMARY KEY (id) )
+    - create table cart_discount (id int (10) AUTO_INCREMENT, customer_id int(10) not null, customer_discount int(10), PRIMARY KEY (id) )
+  single_transaction: yes
