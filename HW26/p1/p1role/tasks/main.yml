@@ -1,0 +1,28 @@
+---
+# tasks file for p1role
+
+- block: # Block for Centos
+    - name: install Nginx Web Server for Centos
+      yum: 
+       name=nginx 
+       state=latest
+  when: ansible_os_family == "RedHat" 
+
+- name: Generate nginx.conf file 
+  template: src=./p1role/files/nginx.conf.j2 dest=/etc/nginx/nginx.conf mode=0644
+
+- name: copy index-files to nginx
+  copy:
+    src: "{{ item }}"
+    dest: /usr/share/nginx/html/ 
+  with_items:
+        - "./p1role/files/indexr.html"
+        - "./p1role/files/indexb.html"
+
+- name: start Nginx Web Server
+  service: name=nginx state=started enabled=yes
+
+- name: Restart NGINX 
+  service: 
+       name=nginx 
+       state=restarted

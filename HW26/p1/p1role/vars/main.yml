@@ -1,0 +1,6 @@
+---
+# vars file for p1role
+indexfile: index.html
+indexfilered: indexr.html
+indexfileblue: indexb.html
+mycolor: whitemy
