@@ -1,0 +1,7 @@
+---
+- name: Install apache jmeter
+  hosts: all
+  become: true
+  
+  roles:
+    - apachejmeter
