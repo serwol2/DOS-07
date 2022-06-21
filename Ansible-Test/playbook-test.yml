@@ -1,0 +1,20 @@
+---
+- name: CopyFiles
+  hosts: all
+  become: true 
+
+  vars:
+      file1: ""
+      file2: ""
+      file3: ""
+      
+  tasks:
+    - name: copy-file
+      copy:
+        src: "{{ item }}"
+        dest: /home/sergey/Desktop
+      with_items:
+         - "{{file1}}"
+         - "{{file2}}"
+         - "{{file3}}"
+      ignore_errors: yes 

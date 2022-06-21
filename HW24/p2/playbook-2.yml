@@ -1,0 +1,92 @@
+---
+- name: install docker & docker compose on ubuntu and centos
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Install yum utils centos
+    yum:
+        name: yum-utils
+        state: latest
+    when: ansible_os_family == "RedHat"
+ 
+  - name: Add Docker repo centos
+    get_url:
+        url: https://download.docker.com/linux/centos/docker-ce.repo
+        dest: /etc/yum.repos.d/docker-ce.repo
+    when: ansible_os_family == "RedHat"      
+
+  - name: install all updates centos
+    yum:
+      name: '*'
+      update_cache: yes
+      state: latest
+    when: ansible_os_family == "RedHat" 
+
+
+  - name: Install Docker centos
+    yum:
+        name: docker-ce
+        state: latest
+    when: ansible_os_family == "RedHat"     
+
+  - name: Install Docker-ce-cli centos
+    yum:
+        name: docker-ce-cli
+        state: latest
+    when: ansible_os_family == "RedHat"     
+
+  - name: Install containerd.io centos
+    yum:
+        name: containerd.io
+        state: latest
+    when: ansible_os_family == "RedHat"     
+
+  
+  - name: "Update Repository cache ubuntu"
+    apt:
+        update_cache: true
+        cache_valid_time: 3600
+        force_apt_get: true
+    when: ansible_os_family == "Debian"    
+      
+  - name: Install required system packages ubuntu
+    apt: name={{ item }} state=latest update_cache=yes
+    loop: [ 'ca-certificates', 'curl', 'gnupg', 'lsb-release' ]
+    when: ansible_os_family == "Debian"
+
+  - name: Add Docker GPG apt Key ubuntu
+    apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+    when: ansible_os_family == "Debian"    
+
+  - name: Add Docker Repository ubuntu
+    apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu focal stable
+        state: present
+    when: ansible_os_family == "Debian"    
+
+  - name: Update apt and install docker-ce ubuntu
+    apt: update_cache=yes name=docker-ce state=latest
+    when: ansible_os_family == "Debian"
+
+  - name: Update apt and install docker-ce-cli ubuntu
+    apt: update_cache=yes name=docker-ce-cli state=latest
+    when: ansible_os_family == "Debian"
+
+  - name: Update apt and install containerd.io ubuntu 
+    apt: update_cache=yes name=containerd.io state=latest
+    when: ansible_os_family == "Debian"
+ 
+  - name: Start Docker service
+    service:
+        name: docker
+        state: started
+        enabled: yes      
+
+  - name: Install docker-compose from official github repo
+    get_url:
+       url : https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+       dest: /usr/local/bin/docker-compose
+       mode: 'u+x,g+x'

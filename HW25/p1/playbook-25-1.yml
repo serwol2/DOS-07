@@ -1,0 +1,72 @@
+---
+- name: install ngunx, htop, wget on ubuntu and centos
+  hosts: all
+  become: yes
+
+  tasks:
+    
+    ####### centos
+
+   - name: Install htop rpm on centos
+     yum:
+        name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+        state: present
+     when: ansible_os_family == "RedHat" 
+
+   - name: install all updates centos
+     yum:
+       name: '*'
+       state: latest
+     when: ansible_os_family == "RedHat" 
+
+   - name: install nginx on centos
+     yum: 
+       name=nginx 
+       state=latest
+     notify:
+         - edit-firewall
+         - reload service firewalld   
+     when: ansible_os_family == "RedHat"
+
+   - name: install htop, wget on centos
+     yum:
+       name: ['htop', 'wget']
+       state: latest
+     when: ansible_os_family == "RedHat" 
+     
+   ########  ubuntu
+
+   - name: "Update Repository cache ubuntu"
+     apt:
+       update_cache: true
+       cache_valid_time: 3600
+       force_apt_get: true
+     when: ansible_os_family == "Debian"
+
+   - name: install htop,wget,nginx on ubuntu
+     apt: 
+      name: ['htop', 'wget', nginx]
+      state: latest
+     when: ansible_os_family == "Debian"
+
+     ######## for all
+   
+   - name: Start nginx
+     systemd: 
+        name: nginx 
+        state: started 
+        enabled: yes
+
+      
+  handlers:
+    
+    - name: edit-firewall
+      firewalld:
+        service: http
+        permanent: true
+        state: enabled
+    
+    - name: reload service firewalld
+      systemd:
+        name: firewalld
+        state: reloaded

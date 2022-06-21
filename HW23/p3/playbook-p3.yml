@@ -1,0 +1,7 @@
+---
+  - name: MyPlaybook3
+    hosts: dev,prod
+
+    tasks:
+      - name: Ping
+        ping:

@@ -1,0 +1,13 @@
+---
+- name: Install mysql 
+  hosts: all
+  become: yes
+
+#   tasks:  
+#    - name: ping-to-server
+#      ansible.builtin.ping: 
+      
+
+
+  roles:
+     - inst-mysql
