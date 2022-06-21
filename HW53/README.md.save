@@ -1,0 +1,14 @@
+1. Создать namespace и развернуть в нем поду с nginx, настроить ограничения по 
+cpu: 500m и memory 256. Реализовать с помощью yml файла
+
+- minikube start
+
+- kubectl create deployment web --image=nginx -o yaml --dry-run=client > p1.yaml
+
+
+2. Развернуть поду с nginx, выгрузить конфигурацию поду в yml
+
+3. Развернуть кубернетес с помощью kubeadmin
+
+4. Create deployment.yaml file and deploy any application (adminer, for example)
+Deploy your own application from Docker HUB (private repo)
