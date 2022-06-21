@@ -4,6 +4,7 @@
 ####################
 ok, отвечают через браузер
 
+
 ![N|Solid](https://github.com/serwol2/DOS-07/blob/main/HW12/Scrsht-jenkins.png)
 ![N|Solid](https://github.com/serwol2/DOS-07/blob/main/HW12/Scrsht-nginx.png)
 ####################

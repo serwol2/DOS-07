@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hw53p4
+  labels:
+    name: hw53p
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: myapp
+   namespace: hw53p4
+spec:
+   containers:
+   - name: myapp-p4
+     image: serwol/app:latest
+     ports:
+      - containerPort: 80
+   imagePullSecrets:
+   - name: dockerhub
