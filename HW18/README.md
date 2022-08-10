@@ -8,7 +8,7 @@
 
 Результат:
 
-[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW18/Printscreen-HW18-1.png)]
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/main/HW18/Printscreen-HW18-1.png)]
 
 ##### Develop a script with a function which will recursively print all files in the directory provided as a parameter provided via READ.
 ##### If this path contains folders - script should recursively do the same in this folder.
