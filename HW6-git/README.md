@@ -8,7 +8,7 @@
 Добавить эти расширения файлов в файл .gitignore
 
 ##### 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)]
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/main/HW6-git/6-1.jpg)]
 #####
 
 2) Изменить регистр букв в файле 
