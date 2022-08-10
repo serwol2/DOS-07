@@ -20,7 +20,7 @@
 ●      используя новый коммит
 git mv File.txt file.txt
 git commit
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)]
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/main/HW6-git/6-2.jpg)]
 
 ●      в старом коммите должен быть файл file.
 mv File.txt file.txt
