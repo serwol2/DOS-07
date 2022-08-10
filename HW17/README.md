@@ -3,7 +3,7 @@
 
 ##### 1) Pass the test: https://proghub.ru/t/bash-for-beginner
 
-[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW17/HW17/test-Bash-for-beginners-2021-12-08_19-37.png)]
+[![N|Solid](https://github.com/serwol2/DOS-07/blob/main/HW17/test-Bash-for-beginners-2021-12-08_19-37.png)]
 
 ##### 2)  Создать скрипт, который проходит по всем аргументам которым мы передаем в скрипт 
 ##### и выводит их ( каждый в новой строке).
