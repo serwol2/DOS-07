@@ -1,5 +1,6 @@
 # DOS-07 My Home Work TeachMeSkills
 
+29. Docker, Ansible, Let’s encrypt, Nginx+balance
 33. AWS
 35. !
 36. AWS + Terraform
