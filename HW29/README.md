@@ -9,7 +9,7 @@
      у меня есть домен tutoronline.by, на него и получаю сертификат
      - прописал DNS на мой адрес
     
-      ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW29/HW29/screenshot-1.png)
+      ![N|Solid](./screenshot-1.png)
     
      - sudo apt install certbot python3-certbot-nginx
      - настроил на машине (доступной по зарегистрированному адресу) nginx 
@@ -29,7 +29,7 @@
   - запуск - playbookHW29-1
   - на скриншоте - 3 экземпляра tutoronline.by - защищенное сертификатом соединение и 3 разных дизайна (балансировщик работает)
    
-   ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW29/HW29/screenshot-2.png)
+   ![N|Solid](./screenshot-2.png)
 
 ##### 4) Посмотре	else(есть?)
 
@@ -42,7 +42,7 @@
 - разместил его и изоражение (ulitka.png) в /var/www/tutoronline.by/public_html/ (на машине с nginx)
 - картинка на страничке:
  
-  ![N|Solid](https://github.com/serwol2/DOS-07/blob/HW29/HW29/p5/screenshot-hw29-p5-1.png)
+  ![N|Solid](./screenshot-hw29-p5-1.png)
 
 - добавил в config nginx (/etc/nginx/conf.d/tutoronline_by_ssl.conf):
      location /ulitka.png {
@@ -52,7 +52,7 @@
 - sudo systemctl restart nginx
 - изображение перевернулось:
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW29/HW29/p5/screenshot-hw29-p5-2.png)
+![N|Solid](./screenshot-hw29-p5-2.png)
 
 
 
