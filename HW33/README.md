@@ -36,7 +36,7 @@
 
 ##### 7. Проверить доступ из бастиона к изолированной сети
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW33/HW33/screenshot-p7-2.png)
+![N|Solid](./screenshot-p7-2.png)
 
 ##### 8. Поднять RDS с сервер с базой данных, настроить репликацию и бэкапы
 
