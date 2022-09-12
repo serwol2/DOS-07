@@ -6,7 +6,7 @@ y – первая строка = 6, вторая строка = 3
 
 - файл p1.py
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW50-Python/HW50/screenshot-hw50-p1-1.png)
+![N|Solid](./screenshot-hw50-p1-1.png)
 
 ##### 2) Вывести лесенкой символ звёздочки по кол-ву строк, заданных пользователем:
 запросить ввод у пользователя кол-ва строк, вывести звёздочки лесенкой.
@@ -25,7 +25,7 @@ y – первая строка = 6, вторая строка = 3
 - делаю усложненный вариант (где получается симметричная ёлка)
 - файл p2.py
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW50-Python/HW50/screenshot-hw50-p2-1.png)
+![N|Solid](./screenshot-hw50-p2-1.png)
 
 ##### 3) Запросить у пользователя ввод числа. Построить цикл от 0 до введённого числа (включительно) и для чётных чисел вывести то, что они чётные, а для нечётных, что они нечётные. Пример вывода:
 0 is EVEN
@@ -35,7 +35,7 @@ y – первая строка = 6, вторая строка = 3
 
 - файл p3.py
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW50-Python/HW50/screenshot-hw50-p3-1.png)
+![N|Solid](./screenshot-hw50-p3-1.png)
 
 
 ##### 4) Написать игру в "камень-ножницы-бумага" против компьютера.
@@ -47,7 +47,7 @@ y – первая строка = 6, вторая строка = 3
 
 - файл p4
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW50-Python/HW50/screenshot-hw50-p4-1.png)
+![N|Solid](./screenshot-hw50-p4-1.png)
 
 
 ##### 5) Написать и протестировать функцию.
@@ -56,7 +56,7 @@ y – первая строка = 6, вторая строка = 3
 
 - файл p5
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW50-Python/HW50/screenshot-hw50-p5-1.png)
+![N|Solid](./screenshot-hw50-p5-1.png)
 
 
 
@@ -65,5 +65,5 @@ y – первая строка = 6, вторая строка = 3
 
 - файл p6
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW50-Python/HW50/screenshot-hw50-p6-1.png)
+![N|Solid](./screenshot-hw50-p6-1.png)
 
