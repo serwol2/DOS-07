@@ -52,7 +52,7 @@
 - sudo systemctl restart nginx
 - изображение перевернулось:
 
-![N|Solid](./screenshot-hw29-p5-2.png)
+![N|Solid](./p5/screenshot-hw29-p5-2.png)
 
 
 
