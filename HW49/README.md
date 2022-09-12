@@ -3,7 +3,7 @@
 
 - файл p1.py
  
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW49-Python/HW49/screenshot-hw49-p1-1.png)
+![N|Solid](./screenshot-hw49-p1-1.png)
 
 ##### 2. Клиент покупает кофе в кафе. За каждые 6 чашек, 1 чашка даётся в качестве бонуса.
 Задача: запросить у пользователя кол-во чашек на покупку, вычислить полагающееся кол-во бонусных чашек кофе и вывести это число на консоль.
@@ -12,7 +12,7 @@ age = input('Введите ваш возраст')л
 
 - файл p2.py
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW49-Python/HW49/screenshot-hw49-p2-1.png)
+![N|Solid](./screenshot-hw49-p2-1.png)
 
 
 ##### 3. Запросить у пользователя координаты x и y двух точек на плоскости. Посчитать расстояние между заданными 
@@ -21,7 +21,7 @@ age = input('Введите ваш возраст')л
 
 - файл p3.py
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW49-Python/HW49/screenshot-hw49-p3-1.png)
+![N|Solid](./screenshot-hw49-p3-1.png)
 
 
 ##### 4. Написать скрипт на пайтоне, который копирует AMI между регионами.
@@ -31,7 +31,7 @@ age = input('Введите ваш возраст')л
 - есть значения по умолчанию для регионов и проверка правильности ввода регионов
 - выводится список AMI в исходном регионе и предлагается выбор по порядковому номеру в списке и проверка на правильность ввода номера
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW49-Python/HW49/screenshot-hw49-p4-1.png)
+![N|Solid](./screenshot-hw49-p4-1.png)
 
 
 ##### 5. Есть проект на Github/Gitlab, в нем много репозиториев - нужно вывести список репозиториев, в которых есть файл properties внутри репы
@@ -39,4 +39,4 @@ age = input('Введите ваш возраст')л
 - pip install PyGithub
 - файл p5.py
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW49-Python/HW49/screenshot-hw49-p5-1.png)
+![N|Solid](./screenshot-hw49-p5-1.png)
