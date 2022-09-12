@@ -16,4 +16,4 @@
 
 Результат работы:
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW36-terraform-auto-scaling/HW36/screenshot-hw36-1.png)
+![N|Solid](./screenshot-hw36-1.png)
