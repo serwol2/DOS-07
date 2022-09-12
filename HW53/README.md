@@ -9,7 +9,7 @@
 - kubectl get pod hw53p1memcpu  --output=yaml --namespace=hw53p1
   или kubectl describe pod hw53p1memcpu  --namespace=hw53p1
 
-![N|Solid](./HW53-Kubernetes/HW53/screenshot-hw53-p1-1.png)
+![Image alt](./HW53-Kubernetes/HW53/screenshot-hw53-p1-1.png)
 
 - kubectl exec -it hw53p1memcpu --namespace=hw53p1 sh (зашел внутрь, посмотрел)
 - kubectl port-forward hw53p1memcpu 8080:80 --namespace=hw53p1
