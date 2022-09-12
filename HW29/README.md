@@ -42,7 +42,7 @@
 - разместил его и изоражение (ulitka.png) в /var/www/tutoronline.by/public_html/ (на машине с nginx)
 - картинка на страничке:
  
-  ![N|Solid](./screenshot-hw29-p5-1.png)
+  ![N|Solid](./p5/screenshot-hw29-p5-1.png)
 
 - добавил в config nginx (/etc/nginx/conf.d/tutoronline_by_ssl.conf):
      location /ulitka.png {
