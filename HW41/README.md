@@ -7,7 +7,7 @@
 - инсталировал ansible роль для работы с базой данных: 
    ansible-galaxy collection install community.mysql
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW41/HW41/screenshot-HW41-p1-1.png)
+![N|Solid](./screenshot-HW41-p1-1.png)
 
 
 ##### 2) Посмотреть файл my.cnf, как его тюнить(поискать варианты по безопасности).
@@ -26,7 +26,7 @@
     insert into customer (name,phone,email) values ("Vasilij Pupkin","123456","pup@kin.com");
 
 - результат заполнения :
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW41/HW41/screenshot-HW41-p4-1.png)
+![N|Solid](./screenshot-HW41-p4-1.png)
 
 - запрос суммарной корзины покупок (cart) для пользователей, отсортировано по имени: 
 
@@ -38,7 +38,7 @@ GROUP BY customer.name ORDER BY customer.name;
 
 Результат: 
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW41/HW41/screenshot-HW41-p4-2.png)
+![N|Solid](./screenshot-HW41-p4-2.png)
 
 
 5) *Развернуть через ansible mysql master и слейву с репликацией(1 мастер и 2 слейва)
