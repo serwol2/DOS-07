@@ -14,7 +14,7 @@
 - kubectl exec -it hw53p1memcpu --namespace=hw53p1 sh (зашел внутрь, посмотрел)
 - kubectl port-forward hw53p1memcpu 8080:80 --namespace=hw53p1
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p1-2.png)
+![N|Solid](./screenshot-hw53-p1-2.png)
 
 - kubectl delete -f p1.yaml
 
@@ -80,9 +80,9 @@
 - на мастере kubectl apply -f calico.yaml  (в этом файле изменен адрес на 172.16.0.0/16)
 - на мастере watch kubectl get pods -n calico-system
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p3-2-.png)
+![N|Solid](./screenshot-hw53-p3-2-.png)
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p3-3-.png)
+![N|Solid](./screenshot-hw53-p3-3-.png)
 
 ##### 4. Create deployment.yaml file and deploy any application (adminer, for example)
 Deploy your own application from Docker HUB (private repo)
@@ -92,7 +92,7 @@ Deploy your own application from Docker HUB (private repo)
 - kubectl  apply -f p4.yaml
 - kubectl port-forward myapp 8888:80 -n hw53p4
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW53-Kubernetes/HW53/screenshot-hw53-p1-4.png)
+![N|Solid](./screenshot-hw53-p1-4.png)
 
 
 https://dev.to/asizikov/using-github-container-registry-with-kubernetes-38fb
