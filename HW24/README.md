@@ -11,7 +11,7 @@ c содержимым: sergey ALL=(ALL:ALL) NOPASSWD:ALL
 
 ansible-playbook -i my_inventory playbook-1.yml
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW24/HW24/p1/screenshot-HW24p1.png)
+![N|Solid](./p1/screenshot-HW24p1.png)
 
 
 ##### 2. Установить докер и docker-compose на машины с убунту и на centos
@@ -19,7 +19,7 @@ ansible-playbook -i my_inventory playbook-1.yml
 - Написал /p2/ansible.cfg , /p2/my_inventory , /p2/playbook-2.yml
 - ansible-playbook -i my_inventory playbook-2.yml
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW24/HW24/p2/screenshot-HW24-p2.png)
+![N|Solid](./p2/screenshot-HW24-p2.png)
 
 
 
@@ -31,10 +31,10 @@ ansible-playbook -i my_inventory playbook-1.yml
 - ansible-playbook -i my_inventory playbook-3-1.yml
 долго ждём
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW24/HW24/p3/screenshot-HW24-3-1.png)
+![N|Solid](./p3/screenshot-HW24-3-1.png)
 
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW24/HW24/p3/screenshot-HW24-3-2.png)
+![N|Solid](./p3/screenshot-HW24-3-2.png)
 
 
 
