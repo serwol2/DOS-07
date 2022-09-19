@@ -3,7 +3,7 @@
 - написаны /p1/ansible.cfg , myhosts , playbook-25-1.yml
 - ansible-playbook -i myhosts playbook-25-1.yml
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW25/HW25/p1/screenshot-hw25-1.png)
+![N|Solid](./p1/screenshot-hw25-1.png)
 
 Всё работает, проверено, скриншоты на даю, прошу поверить на слово )
 
