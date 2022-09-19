@@ -1,5 +1,6 @@
 # DOS-07 My Home Work TeachMeSkills
 
+24. Ansible-playbook
 25. Ansible-playbook
 26. Ansible -
 28. Ansible, Nginx, Apache Jmetr
