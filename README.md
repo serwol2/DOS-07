@@ -1,5 +1,6 @@
 # DOS-07 My Home Work TeachMeSkills
 
+18. Bash
 22. !
 23. Docker, Ansible
 24. Ansible-playbook
