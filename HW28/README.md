@@ -22,7 +22,7 @@ Centos: https://tylersguides.com/guides/installing-nginx-from-source-on-centos-7
 - запуск: ansible-playbook -i myhosts playbookHW28-3.yml
 - nginx работает на всех машинах, отвечает в браузере
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p3/Screenshot-HW28-p3-1.png)
+![N|Solid](./p3/Screenshot-HW28-p3-1.png)
 
 Установил Openresty (p3-2) через Ansible (роль) на CentOS Stream release 8 и Ubuntu 20.04,
 Установка на машины без Nginx (не контролируется, не удаляется если есть).
@@ -39,8 +39,8 @@ Centos: https://tylersguides.com/guides/installing-nginx-from-source-on-centos-7
 
 - перезагружаю сервис: sudo systemctl reload openresty
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p3-2/screenshot-HW28-p3-2-1.png)
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p3-2/screenshot-HW28-p3-2-2.png)
+![N|Solid](./p3-2/screenshot-HW28-p3-2-1.png)
+![N|Solid](./p3-2/screenshot-HW28-p3-2-2.png)
 
 
 ##### 4. Установить  apache jmetr для тестирования нагрузки вебсерверов (лучше сделать через ansible и установить сервер, и воркеры на других машинах)
@@ -49,7 +49,7 @@ Centos: https://tylersguides.com/guides/installing-nginx-from-source-on-centos-7
   - ansible-playbook -i myhosts playbookHW28-4.yml
   -  /etc/jmeter/apache-jmeter-5.4/bin/  ./jmeter.sh 
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW28/HW28/p4/screenshot-HW28-p4-1.png)
+![N|Solid](./p4/screenshot-HW28-p4-1.png)
 
 
 5. Доделать то, что не завершили на уроке
