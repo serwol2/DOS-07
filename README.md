@@ -1,5 +1,6 @@
 # DOS-07 My Home Work TeachMeSkills
 
+14. Linux - displaying system info 
 16. Linux - users, groups, services, displaying system info 
 17. Bash
 18. Bash
