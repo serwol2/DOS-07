@@ -1,6 +1,6 @@
 # DOS-07 My Home Work TeachMeSkills
 
-17. Bash (!!)
+17. Bash
 18. Bash
 22. !
 23. Docker, Ansible
