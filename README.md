@@ -4,7 +4,7 @@
 16. Linux - users, groups, services, displaying system info 
 17. Bash
 18. Bash
-22. !
+22. Bash 
 23. Docker, Ansible
 24. Ansible-playbook
 25. Ansible-playbook
