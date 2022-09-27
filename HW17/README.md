@@ -3,7 +3,7 @@
 
 ##### 1) Pass the test: https://proghub.ru/t/bash-for-beginner
 
-[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW17/HW17/test-Bash-for-beginners-2021-12-08_19-37.png)]
+[![N|Solid](./test-Bash-for-beginners-2021-12-08_19-37.png)]
 
 ##### 2)  Создать скрипт, который проходит по всем аргументам которым мы передаем в скрипт 
 ##### и выводит их ( каждый в новой строке).
@@ -12,7 +12,7 @@ hw17-2.sh
 
 результат работы:
 
-[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW17/HW17/PrintScreen-HW17-2.png)]
+[![N|Solid](./PrintScreen-HW17-2.png)]
 
 ##### 3) Develop a script which will recursively print all files in the directory provided 
 ##### as a parameter provided via READ.
@@ -22,7 +22,7 @@ hw17-2.sh
 
 результат работы:
 
-[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW17/HW17/PrintScreen-HW17-3.png)]
+[![N|Solid](./PrintScreen-HW17-3.png)]
 
 
 ##### $) *Написать скрипт, который будет считать the sum and average чисел в 3 колонках
@@ -38,4 +38,4 @@ hw17-2.sh
 
 результат работы:
 
-[![N|Solid](https://github.com/serwol2/DOS-07/blob/HW17/HW17/PrintScreen-HW17-4.png)]
+[![N|Solid](./PrintScreen-HW17-4.png)]
