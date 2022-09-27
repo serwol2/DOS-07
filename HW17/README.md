@@ -1,5 +1,6 @@
 # HomeWork-17
 Срок 12.12.2021
+ 
 
 ##### 1) Pass the test: https://proghub.ru/t/bash-for-beginner
 
