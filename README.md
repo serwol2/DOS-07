@@ -1,6 +1,6 @@
 # DOS-07 My Home Work TeachMeSkills
 
-13. Linux - X11, tar, dir e t.c.
+13. Linux - X11, tar, dir etc..
 14. Linux - displaying system info 
 16. Linux - users, groups, services, displaying system info 
 17. Bash
