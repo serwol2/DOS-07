@@ -1,5 +1,6 @@
 # DOS-07 My Home Work TeachMeSkills
 
+GIT_TASKS.  Git  
 N06. Git  
 N09. KVM, change disk size in linux  
 N10. KVM, Docker  
