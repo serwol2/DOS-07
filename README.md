@@ -17,7 +17,8 @@ N31. AWS IAM, S3, CLI
 N33. AWS  
 N35. AWS + Terraform  
 N36. AWS + Terraform  
-N41. Ansible + Databases  
+N41. Ansible + Databases
+N43. CI/CD -  
 N49. Python  
 N50. Python  
 N53. Kubernetes  
