@@ -14,7 +14,7 @@ N26. Ansible -
 N28. Ansible, Nginx, Apache Jmetr  
 N29. Docker, Ansible, Let’s encrypt, Nginx+balance  
 N33. AWS  
-N35. 35 ?? !  
+N35. AWS + Terraform  
 N36. AWS + Terraform  
 N41. Ansible + Databases  
 N49. Python  
