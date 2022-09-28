@@ -1,6 +1,6 @@
 # DOS-07 My Home Work TeachMeSkills
 
-N12. Networks,IP addresses
+N12. Networks,IP addresses  
 N13. Linux - X11, tar, dir etc..  
 N14. Linux - displaying system info  
 N16. Linux - users, groups, services, displaying system info  
