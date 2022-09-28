@@ -2,7 +2,9 @@
 
 
 N06. Git  
-N09. KVM , change disk size in linux
+N09. KVM, change disk size in linux  
+N10. KVM, Docker  
+N11. OSI Model, Linux Apt, Hypervisor types   
 N12. Networks,IP addresses  
 N13. Linux - X11, tar, dir etc..  
 N14. Linux - displaying system info  
@@ -30,5 +32,3 @@ N52. Python -
 N53. Kubernetes  
 N54. Kubernetes -  
 N57. Prometheus, Grafana   
-
-
