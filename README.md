@@ -1,4 +1,4 @@
-# DOS-07 My Homework TeachMeSkills
+# DOS-07 My Homework in TeachMeSkills
 
 GIT_TASKS.  Git  
 N02. Linux (.docx)  
