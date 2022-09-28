@@ -14,7 +14,7 @@
 28. Ansible, Nginx, Apache Jmetr
 29. Docker, Ansible, Let’s encrypt, Nginx+balance
 33. AWS
-35. !
+35. 35 ?? !
 36. AWS + Terraform
 41. Ansible + Databases
 49. Python
