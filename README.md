@@ -1,6 +1,5 @@
 # DOS-07 My Home Work TeachMeSkills
 
-
 N06. Git  
 N09. KVM, change disk size in linux  
 N10. KVM, Docker  
@@ -28,7 +27,7 @@ N45. CI/CD -
 N49. Python  
 N50. Python  
 N51. Create a list of 10 CI/CD tools. Compare and explain benefits  
-N52. Python - 
+N52. Python -   
 N53. Kubernetes  
 N54. Kubernetes -  
 N57. Prometheus, Grafana   
