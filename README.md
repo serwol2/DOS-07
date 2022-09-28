@@ -2,7 +2,7 @@
 
 GIT_TASKS.  Git  
 N02. Linux (.docx)  
-N03. Linux (.docx)
+N03. Linux (.docx)  
 N04. Linux, Vagrant (.docx)  
 N06. Git  
 N09. KVM, change disk size in linux  
