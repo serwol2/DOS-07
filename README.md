@@ -4,7 +4,9 @@ GIT_TASKS.  Git
 N02. Linux (.docx)  
 N03. Linux (.docx)  
 N04. Linux, Vagrant (.docx)  
+N05. Linux (.docx) 
 N06. Git  
+N08. Git, change disk size in linux (.docx)  
 N09. KVM, change disk size in linux  
 N10. KVM, Docker  
 N11. OSI Model, Linux Apt, Hypervisor types   
