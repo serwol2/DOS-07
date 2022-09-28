@@ -10,6 +10,7 @@
 - инструкция здесь: https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html
 
 скриншот (screenshotHW31-3.png)
+![](./screenshotHW31-3.png)
 
 
 ##### 5) Установить AWS SDK и через aws-cli повторить пункт 2 и 4, используя креды юзера, которого создали
