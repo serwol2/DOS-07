@@ -7,7 +7,7 @@
 
 результат: 
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW35-terraform/HW35/screenshot-hw35-p1-1.png)
+![N|Solid](./screenshot-hw35-p1-1.png)
 
 ##### 2. Подключиться к странице с nginx с локальной машины
 
@@ -21,4 +21,4 @@
 
 Результат:
 
-![N|Solid](https://github.com/serwol2/DOS-07/blob/HW35-terraform/HW35/screenshot-hw35-p3-1.png)
+![N|Solid](./screenshot-hw35-p3-1.png)
