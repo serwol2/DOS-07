@@ -12,7 +12,7 @@
  Результат работы:
 
 
-[![N|Solid](https://github.com/serwol2/DOS-07/blob/BASH-TEST/BASH-TEST/Screenshot-Bashtest-1.png)]
+[![N|Solid](./Screenshot-Bashtest-1.png)]
 
 
 ##### Скрипт 2*. 
