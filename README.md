@@ -13,7 +13,7 @@ N25. Ansible-playbook
 N26. Ansible -  
 N28. Ansible, Nginx, Apache Jmetr  
 N29. Docker, Ansible, Let’s encrypt, Nginx+balance  
-N31. AWS IAM, S3, CLI
+N31. AWS IAM, S3, CLI  
 N33. AWS  
 N35. AWS + Terraform  
 N36. AWS + Terraform  
