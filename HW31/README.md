@@ -9,14 +9,13 @@
 ##### 4) Создать s3 бакет, разместить в него веб-сайт, проверить доступность со своего компьютера
 - инструкция здесь: https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html
 
-скриншот (screenshotHW31-3.png)
 ![](./screenshotHW31-3.png)
 
 
 ##### 5) Установить AWS SDK и через aws-cli повторить пункт 2 и 4, используя креды юзера, которого создали
 
 - инфо по установке AWS SDK здесь: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-(скриншот screenshotHW31-5.png)
+![](./screenshotHW31-5.png)
 
 - aws ec2 create-security-group --group-name MyGroup8022443 --description "Security group 80 22 443"
 - aws ec2 authorize-security-group-ingress --group-name MyGroup8022443 --protocol tcp --port 80 --cidr 0.0.0.0/0
