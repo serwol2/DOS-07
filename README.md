@@ -1,22 +1,22 @@
 # DOS-07 My Home Work TeachMeSkills
 
 
-13. Linux - X11, tar, dir etc..
-14. Linux - displaying system info 
-16. Linux - users, groups, services, displaying system info 
-17. Bash
-18. Bash
-22. Bash 
-23. Docker, Ansible
-24. Ansible-playbook
-25. Ansible-playbook
-26. Ansible -
-28. Ansible, Nginx, Apache Jmetr
-29. Docker, Ansible, Let’s encrypt, Nginx+balance
-33. AWS
-35. 35 ?? !
-36. AWS + Terraform
-41. Ansible + Databases
-49. Python
-50. Python
-53. Kubernetes
+N13. Linux - X11, tar, dir etc..
+N14. Linux - displaying system info 
+N16. Linux - users, groups, services, displaying system info 
+N17. Bash
+N18. Bash
+N22. Bash 
+N23. Docker, Ansible
+N24. Ansible-playbook
+N25. Ansible-playbook
+N26. Ansible -
+N28. Ansible, Nginx, Apache Jmetr
+N29. Docker, Ansible, Let’s encrypt, Nginx+balance
+N33. AWS
+N35. 35 ?? !
+N36. AWS + Terraform
+N41. Ansible + Databases
+N49. Python
+N50. Python
+N53. Kubernetes
