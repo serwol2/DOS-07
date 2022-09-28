@@ -4,16 +4,15 @@
 ####################
 ok, отвечают через браузер
 
-
-![N|Solid](https://github.com/serwol2/DOS-07/blob/main/HW12/Scrsht-jenkins.png)
-![N|Solid](https://github.com/serwol2/DOS-07/blob/main/HW12/Scrsht-nginx.png)
+![screenshot1](./Scrsht-jenkins.png)
+![screenshot2](./Scrsht-nginx.png)
 ####################
 
 3) Просканить все порты и машины в сети одной командой.
 ####################
 nmap  192.168.31.0/24
 
-![screenshot](https://github.com/serwol2/DOS-07/blob/main/HW12/Scrsht-openports.png)
+![screenshot](./Scrsht-openports.png)
 ####################
 
 4) Есть ip адрес 172.16.1.48 и маска подсети 255.255.224.0
