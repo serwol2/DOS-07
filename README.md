@@ -1,5 +1,8 @@
 # DOS-07 My Home Work TeachMeSkills
 
+
+N06. Git  
+N09. KVM , change disk size in linux
 N12. Networks,IP addresses  
 N13. Linux - X11, tar, dir etc..  
 N14. Linux - displaying system info  
@@ -19,6 +22,13 @@ N35. AWS + Terraform
 N36. AWS + Terraform  
 N41. Ansible + Databases  
 N43. CI/CD -  
+N45. CI/CD -   
 N49. Python  
 N50. Python  
+N51. Create a list of 10 CI/CD tools. Compare and explain benefits  
+N52. Python - 
 N53. Kubernetes  
+N54. Kubernetes -  
+N57. Prometheus, Grafana   
+
+
