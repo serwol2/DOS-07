@@ -2,7 +2,9 @@
 
 
 N13. Linux - X11, tar, dir etc..
-N14. Linux - displaying system info 
+
+N14. Linux - displaying system info
+
 N16. Linux - users, groups, services, displaying system info 
 N17. Bash
 N18. Bash
