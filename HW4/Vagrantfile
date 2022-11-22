@@ -1,0 +1,41 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+  config.vm.hostname = "My-Vagrant-1"
+    
+    config.vm.network "public_network", bridge: "eth1" 
+ 
+    config.vm.network "private_network", ip: "192.168.15.1", virtualbox__intnet: true 
+
+   config.vm.provision "shell", inline: <<-SHELL
+     sudo useradd -m serwol
+     sudo echo serwol:12345 | chpasswd
+     sudo mkdir -p /home/serwol/.ssh
+     sudo chown -R serwol:serwol /home/serwol/.ssh
+        
+   SHELL
+
+
+config.vm.provision "shell" do |s|
+    ssh_pub_key = File.readlines("#{Dir.home}/.ssh/id_rsa.pub").first.strip
+    ssh_pri_key = File.readlines("#{Dir.home}/.ssh/id_rsa").first.strip
+    s.inline = <<-SHELL
+      echo #{ssh_pub_key} >> /home/vagrant/.ssh/authorized_keys
+      echo #{ssh_pub_key} >> /home/serwol/.ssh/authorized_keys
+      echo #{ssh_pri_key} >> /home/vagrant/.ssh/id_rsa
+      echo #{ssh_pri_key} >> /home/serwol/.ssh/id_rsa
+      echo #{ssh_pub_key} >> /root/.ssh/authorized_key
+      echo #{ssh_pri_key} >> /root/.ssh/id_rsa
+
+    SHELL
+end
+
+#config.vm.provision "shell", inline: <<-SHELL
+#     apt update
+#     apt install -y mc
+#   SHELL
+
+
+end
+
+
+
